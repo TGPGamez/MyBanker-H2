@@ -41,5 +41,17 @@ namespace MyBanker_H2.Lib
             this.cards.Add(card);
         }
 
+        public Card GetCard(string cardNumber)
+        {
+            foreach (Card card in cards)
+            {
+                if (card.CardNumber == cardNumber)
+                {
+                    return card;
+                }
+            }
+            return null;
+        }
+
     }
 }

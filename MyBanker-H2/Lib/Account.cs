@@ -34,7 +34,7 @@ namespace MyBanker_H2.Lib
         public double Balance
         {
             get { return balance; }
-            protected set { balance = value; }
+            private set { balance = value; }
         }
 
         public Account(string holderName)

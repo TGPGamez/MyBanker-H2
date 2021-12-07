@@ -9,39 +9,38 @@ namespace MyBanker_H2.Lib
     public abstract class Card
     {
         private Account account;
-        protected Account Account
+        public Account Account
         {
             get { return account; }
-            private set { account = value; }
         }
 
         private string cardNumber;
-        protected string CardNumber
+        public string CardNumber
         {
             get { return cardNumber; }
-            set { cardNumber = value; }
+            protected set { cardNumber = value; }
         }
 
         private string cvv;
-        protected string CVV
+        public string CVV
         {
             get { return cvv; }
-            private set { cvv = value; }
+            protected set { cvv = value; }
         }
 
         private int lengthOfCard;
-        protected int LengthOfCard
+        public int LengthOfCard
         {
             get { return lengthOfCard; }
-            set { lengthOfCard = value; }
+            protected set { lengthOfCard = value; }
         }
 
 
         private string[] prefixes;
-        protected string[] Prefixes
+        public string[] Prefixes
         {
             get { return prefixes; }
-            set { prefixes = value; }
+            protected set { prefixes = value; }
         }
 
 

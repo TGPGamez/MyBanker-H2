@@ -9,17 +9,17 @@ namespace MyBanker_H2.Lib
     public class CreditCard : Card
     {
         private double maxCreditUse;
-        protected double MaxCreditUse
+        public double MaxCreditUse
         {
             get { return maxCreditUse; }
-            set { maxCreditUse = value; }
+            protected set { maxCreditUse = value; }
         }
 
         private double creditUsed;
-        protected double CreditUsed
+        public double CreditUsed
         {
             get { return creditUsed; }
-            set { creditUsed = value; }
+            protected set { creditUsed = value; }
         }
 
         public CreditCard(Account account) : base(account)
