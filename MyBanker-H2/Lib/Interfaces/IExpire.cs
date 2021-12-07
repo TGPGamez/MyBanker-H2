@@ -9,5 +9,7 @@ namespace MyBanker_H2.Lib
     interface IExpire
     {
         public DateTime ExpirationDate { get; set; }
+
+        public DateTime CalculateExpirationDate(int years, int months);
     }
 }

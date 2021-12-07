@@ -10,7 +10,7 @@ namespace MyBanker_H2.Lib
     {
         public Visa(Account account) : base(account)
         {
-            expire = DateTime.Now.AddYears(5);
+            expire = CalculateExpirationDate(5, 0);
             this.LengthOfCard = 14;
             this.AgeLimit = 18;
             this.MaxCreditUse = 25000;
@@ -31,6 +31,20 @@ namespace MyBanker_H2.Lib
                 $"Card Number: {this.CardNumber}\nCVV: {this.CVV}\n" +
                 $"Expire date: {expire.ToString()}\n" +
                 $"Credit withdraw: {this.CreditUsed}/{this.MaxCreditUse}\n";
+        }
+
+        /// <summary>
+        /// Calculates expire date out from parameters
+        /// </summary>
+        /// <param name="years"></param>
+        /// <param name="months"></param>
+        /// <returns></returns>
+        public DateTime CalculateExpirationDate(int years, int months)
+        {
+            DateTime dateTime = DateTime.Now;
+            dateTime.AddYears(years);
+            dateTime.AddMonths(months);
+            return dateTime;
         }
     }
 }

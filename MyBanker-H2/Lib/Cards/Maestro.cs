@@ -10,7 +10,7 @@ namespace MyBanker_H2.Lib
     {
         public Maestro(Account account) : base(account)
         {
-            expire = DateTime.Now.AddYears(5).AddMonths(8);
+            expire = CalculateExpirationDate(5, 8);
             this.LengthOfCard = 19;
             this.AgeLimit = 18;
             this.Prefixes = new string[]
@@ -30,6 +30,20 @@ namespace MyBanker_H2.Lib
                 $"Card Number: {this.CardNumber}\n" +
                 $"CVV: {this.CVV}\n" +
                 $"Expire date: {expire.ToString()}\n";
+        }
+
+        /// <summary>
+        /// Calculates expire date out from parameters
+        /// </summary>
+        /// <param name="years"></param>
+        /// <param name="months"></param>
+        /// <returns></returns>
+        public DateTime CalculateExpirationDate(int years, int months)
+        {
+            DateTime dateTime = DateTime.Now;
+            dateTime.AddYears(years);
+            dateTime.AddMonths(months);
+            return dateTime;
         }
 
         /// <summary>
