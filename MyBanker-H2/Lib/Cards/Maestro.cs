@@ -17,6 +17,7 @@ namespace MyBanker_H2.Lib
             {
                 "5018", "5020", "5038", "5893",  "6304", "6759", "6761", "6762", "6763"
             };
+            //Generate random cardNumber
             this.CardNumber = GenerateCardNumber();
         }
 
@@ -31,6 +32,10 @@ namespace MyBanker_H2.Lib
                 $"Expire date: {expire.ToString()}\n";
         }
 
+        /// <summary>
+        /// Withdraws amount from Account balance if conditions is met
+        /// </summary>
+        /// <param name="amount"></param>
         public override void WithdrawFromCard(double amount)
         {
             if (this.Account.Balance >= amount)
@@ -39,6 +44,10 @@ namespace MyBanker_H2.Lib
             }
         }
 
+        /// <summary>
+        /// Deposit amount to Account balance
+        /// </summary>
+        /// <param name="amount"></param>
         public override void DepositToCard(double amount)
         {
             this.Account.Deposit(amount);

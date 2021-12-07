@@ -36,11 +36,21 @@ namespace MyBanker_H2.Lib
             this.cards = new List<Card>();
         }
 
+
+        /// <summary>
+        /// Add a card to to Cards
+        /// </summary>
+        /// <param name="card"></param>
         public void AddCard(Card card)
         {
             this.cards.Add(card);
         }
 
+        /// <summary>
+        /// Finds specific card out from cardNumber and returns card
+        /// </summary>
+        /// <param name="cardNumber"></param>
+        /// <returns></returns>
         public Card GetCard(string cardNumber)
         {
             foreach (Card card in cards)

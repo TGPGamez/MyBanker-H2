@@ -59,11 +59,15 @@ namespace MyBanker_H2.Lib
             this.cvv = GenerateCVV();
         }
 
-
+        //Abstract methods
         public abstract void WithdrawFromCard(double amount);
         public abstract void DepositToCard(double amount);
 
 
+        /// <summary>
+        /// Generates a CardNumber out from length and a random prefix
+        /// </summary>
+        /// <returns></returns>
         protected string GenerateCardNumber()
         {
             string prefix = Prefixes[new Random().Next(0, Prefixes.Length)];
@@ -75,6 +79,11 @@ namespace MyBanker_H2.Lib
             return generatedNumber;
         }
 
+
+        /// <summary>
+        /// Generates a random 3 digit CVV
+        /// </summary>
+        /// <returns></returns>
         private string GenerateCVV()
         {
             string generatedCVV = String.Empty;

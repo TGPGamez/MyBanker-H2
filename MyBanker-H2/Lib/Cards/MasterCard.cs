@@ -18,6 +18,7 @@ namespace MyBanker_H2.Lib
             {
                 "51", "52", "53", "54", "55"
             };
+            //Generate random cardNumber
             this.CardNumber = GenerateCardNumber();
         }
 

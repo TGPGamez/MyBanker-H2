@@ -54,6 +54,10 @@ namespace MyBanker_H2.Lib
 
         }
 
+        /// <summary>
+        /// Generate a AccountNumber that is 10 characters long
+        /// </summary>
+        /// <returns></returns>
         private string GenerateAccountNumber()
         {
             string generatedNumber = String.Empty;
@@ -64,11 +68,20 @@ namespace MyBanker_H2.Lib
             return generatedNumber;
         }
 
+
+        /// <summary>
+        /// Withdraws from balance
+        /// </summary>
+        /// <param name="amount"></param>
         public void Withdraw(double amount) 
         {
             balance -= amount;
         }
 
+        /// <summary>
+        /// Deposits to balance
+        /// </summary>
+        /// <param name="amount"></param>
         public void Deposit(double amount)
         {
             balance += amount;

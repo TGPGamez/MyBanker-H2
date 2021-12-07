@@ -28,6 +28,11 @@ namespace MyBanker_H2.Lib
         }
 
 
+        /// <summary>
+        /// Withdraws amount from Account balance if conditions is met
+        /// and adds amount to usedCredit
+        /// </summary>
+        /// <param name="amount"></param>
         public override void WithdrawFromCard(double amount)
         {
             double canWithdraw = (maxCreditUse - creditUsed);
@@ -39,8 +44,12 @@ namespace MyBanker_H2.Lib
                     this.Account.Withdraw(amount);
                 }
             }
-        }  
+        }
 
+        /// <summary>
+        /// Deposit amount to Account balance
+        /// </summary>
+        /// <param name="amount"></param>
         public override void DepositToCard(double amount)
         {
             this.Account.Deposit(amount);
