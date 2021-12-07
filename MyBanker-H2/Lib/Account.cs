@@ -9,10 +9,17 @@ namespace MyBanker_H2.Lib
     public class Account
     {
         private string accountHolderName;
-        public string AccountHolderName
+        public string HolderName
         {
             get { return accountHolderName; }
             private set { accountHolderName = value; }
+        }
+
+        private int accountHolderAge;
+        public int HolderAge
+        {
+            get { return accountHolderAge; }
+            private set { accountHolderAge = value; }
         }
 
 
@@ -37,9 +44,10 @@ namespace MyBanker_H2.Lib
             private set { balance = value; }
         }
 
-        public Account(string holderName)
+        public Account(string holderName, int age)
         {
             this.accountHolderName = holderName;
+            this.accountHolderAge = age;
             this.regNr = "3520";
             this.accountNumber = GenerateAccountNumber();
             this.Balance = 0;

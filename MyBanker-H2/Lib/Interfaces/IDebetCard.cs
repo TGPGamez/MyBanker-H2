@@ -8,5 +8,6 @@ namespace MyBanker_H2.Lib
 {
     interface IDebetCard
     {
+
     }
 }

@@ -30,9 +30,9 @@ namespace MyBanker_H2.Lib
             private set { cards = value; }
         }
 
-        public AccountManager(string holderName)
+        public AccountManager(string holderName, int age)
         {
-            this.account = new Account(holderName);
+            this.account = new Account(holderName, age);
             this.cards = new List<Card>();
         }
 

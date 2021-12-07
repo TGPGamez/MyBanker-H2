@@ -10,7 +10,7 @@ namespace MyBanker_H2
             //GUI gui = new GUI(true, new Person("Tobias", 20));
             //gui.StartMenu();
 
-            AccountManager accountManager = new AccountManager("Tobias Prang");
+            AccountManager accountManager = new AccountManager("Tobias Prang", 18);
             Card mastercard = new MasterCard(accountManager.Account);
             Card visa = new Visa(accountManager.Account);
             Card maestro = new Maestro(accountManager.Account);

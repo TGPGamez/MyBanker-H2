@@ -11,6 +11,7 @@ namespace MyBanker_H2.Lib
         public Haevekort(Account account) : base(account)
         {
             this.LengthOfCard = 14;
+            this.AgeLimit = 18;
             this.Prefixes = new string[]
             {
                 "2400"
@@ -20,7 +21,7 @@ namespace MyBanker_H2.Lib
 
         public override string ToString()
         {
-            return $"\nHolderName: {this.Account.AccountHolderName}\n" +
+            return $"\nHolderName: {this.Account.HolderName}\n" +
                 $"Card Number: {this.CardNumber}\nCVV: {this.CVV}\n";
         }
 

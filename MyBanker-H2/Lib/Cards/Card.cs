@@ -12,6 +12,14 @@ namespace MyBanker_H2.Lib
         public Account Account
         {
             get { return account; }
+            protected set { account = value; }
+        }
+
+        private int ageLimit;
+        public int AgeLimit
+        {
+            get { return ageLimit; }
+            protected set { ageLimit = value; }
         }
 
         private string cardNumber;

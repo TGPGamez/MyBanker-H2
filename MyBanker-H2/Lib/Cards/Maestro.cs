@@ -12,6 +12,7 @@ namespace MyBanker_H2.Lib
         {
             expire = DateTime.Now.AddYears(5).AddMonths(8);
             this.LengthOfCard = 19;
+            this.AgeLimit = 18;
             this.Prefixes = new string[]
             {
                 "5018", "5020", "5038", "5893",  "6304", "6759", "6761", "6762", "6763"
@@ -24,7 +25,7 @@ namespace MyBanker_H2.Lib
 
         public override string ToString()
         {
-            return $"\nHolderName: {this.Account.AccountHolderName}\n" +
+            return $"\nHolderName: {this.Account.HolderName}\n" +
                 $"Card Number: {this.CardNumber}\n" +
                 $"CVV: {this.CVV}\n" +
                 $"Expire date: {expire.ToString()}\n";
